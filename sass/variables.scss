@@ -1,0 +1,20 @@
+$html-size-base: 10px;
+$font-size: 1.4rem;
+$line-height: 2.4rem;
+$font-family: "ComfortaaRegular", Arial, sans-serif;
+
+
+$container-mobile: 260px;
+$container-tablet: 668px;
+$container-desktop: 1050px;
+
+
+$screen-mobile: 320px;
+$screen-tablet: 768px;
+$screen-desktop: 1150px;
+
+
+$tablet-widths: "(min-width: #{$screen-tablet})";
+$desktop-widths: "(min-width: #{$screen-desktop})";
+
+$retina: "(min-resolution: 144dpi),(min-resolution: 1.5dppx)";
