@@ -1,0 +1,137 @@
+.site-branding {
+  position: relative;
+  @include container;
+}
+
+.site-title {
+  a {
+    font-family: $font-family-titles;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.main-navigation .menu {
+  display: block;
+  font-family: $font-family-titles;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 3rem;
+  text-transform: uppercase;
+  @include container;
+  a {
+    color: #ffffff;
+  }
+}
+
+@media #{$mobile-widths-only} {
+
+.site-header {
+  position: relative;
+  background-color: #ffcf08;
+  color: #ffffff;
+}
+
+.site-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a {
+    color: #ffffff;
+  }
+}
+
+.custom-logo-link {
+  display: none;
+}
+
+.site-description {
+  display: none;
+}
+
+.site-header--closed {
+
+  .kindergarten-menu-toggle {
+    position: relative;
+
+    width: 30px;
+    height: 26px;
+    display: block;
+    &::before {
+      position: absolute;
+      z-index: 100;
+      top: 4px;
+      left: 0;
+
+      width: 100%;
+      height: 4px;
+
+      content: "";
+
+      background-color: #ffffff;
+      box-shadow: 0 8px 0 0 #ffffff,
+      0 16px 0 0 #ffffff;
+    }
+  }
+
+  .main-navigation {
+    display: none;
+  }
+}
+
+.site-header--opened {
+
+  .kindergarten-menu-toggle {
+    position: relative;
+    z-index: 99;
+
+    display: block;
+
+    width: 30px;
+    height: 30px;
+    &::before,
+    &::after {
+      position: absolute;
+      z-index: 100;
+      top: 15px;
+      left: -5px;
+
+      width: 42px;
+      height: 3px;
+
+      content: "";
+
+      background-color: #ffffff;
+    }
+    &::before {
+      transform: rotate(45deg);
+
+      box-shadow: none;
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+
+    .main-navigation {
+      display: block;
+      position: absolute;
+      z-index:100px;
+      top:80px;
+      left:0;
+      background-color: #ffcf08;
+    }
+}
+
+.main-navigation .menu {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.main-navigation li.menu-item {
+  float: none;
+  display: block;
+  width: 100%;
+}
+
+}

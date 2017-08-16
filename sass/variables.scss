@@ -1,7 +1,8 @@
 $html-size-base: 10px;
 $font-size: 1.4rem;
-$line-height: 2.4rem;
-$font-family: "ComfortaaRegular", Arial, sans-serif;
+$line-height: 2rem;
+$font-family-main: "ComfortaaRegular", Arial, sans-serif;
+$font-family-titles: "ComicReliefBold", Arial, sans-serif;
 
 
 $container-mobile: 260px;
@@ -14,6 +15,7 @@ $screen-tablet: 768px;
 $screen-desktop: 1150px;
 
 
+$mobile-widths-only: "(max-width: 767px)";
 $tablet-widths: "(min-width: #{$screen-tablet})";
 $desktop-widths: "(min-width: #{$screen-desktop})";
 

@@ -17,6 +17,9 @@ get_header(); ?>
 
     <?php
 
+    if (is_front_page()) : echo "<h2> is_front_page() = true </h2>"; endif;
+    if (is_home()) : echo "<h2> is_home() = true </h2>"; endif;
+
     $args = [
     "post_name__in"      => ["about","timetable"],
     "post_type"          => "page",
