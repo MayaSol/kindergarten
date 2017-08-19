@@ -11,17 +11,11 @@
 get_header(); ?>
 
   <div id="primary" class="content-area">
-    <main id="main" class="site-main">
+    <main id="main" class="site-main  site-main--front-page">
 
-    <h1>Front-page.php</h1>
-
-    <?php
-
-    if (is_front_page()) : echo "<h2> is_front_page() = true </h2>"; endif;
-    if (is_home()) : echo "<h2> is_home() = true </h2>"; endif;
-
+<?php
     $args = [
-    "post_name__in"      => ["about","timetable"],
+    "post_name__in"      => ["about","timetable","contacts"],
     "post_type"          => "page",
     "ignore_sticky_posts" => 1,
     "orderby" => "post_name__in"
@@ -33,8 +27,6 @@ get_header(); ?>
 
     if ( $the_query->have_posts() ) :
 
-      echo "<h2>Pages: </h2>";
-
       /* Start the Loop */
       while ( $the_query->have_posts() ) : $the_query->the_post();
 
@@ -50,16 +42,14 @@ get_header(); ?>
 
     endif;
 
-    wp_reset_postdata();
+/*    wp_reset_postdata();
 
     $the_query = new WP_Query("posts_per_page=1");
 
     if ( $the_query->have_posts() ) :
 
-      echo "<h2>Only one latest post: </h2>";
-
       /* Start the Loop */
-      while ( $the_query->have_posts() ) : $the_query->the_post();
+ /*     while ( $the_query->have_posts() ) : $the_query->the_post();
 
         /*
          * Include the Post-Format-specific template for the content.
@@ -67,11 +57,11 @@ get_header(); ?>
          * called content-___.php (where ___ is the Post Format name) and that will be used instead.
          */
 
-        get_template_part( "template-parts/content","short" );
+/*        get_template_part( "template-parts/content","short" );
 
       endwhile;
 
-    endif;
+    endif;*/
     ?>
 
     </main><!-- #main -->

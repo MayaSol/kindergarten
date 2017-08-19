@@ -13,8 +13,9 @@
 
 .main-navigation .menu {
   display: block;
+  padding-bottom: 10px;
   font-family: $font-family-titles;
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 700;
   line-height: 3rem;
   text-transform: uppercase;
@@ -22,7 +23,13 @@
   a {
     color: #ffffff;
   }
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #ffffff;
+  }
 }
+
+
 
 @media #{$mobile-widths-only} {
 
@@ -87,17 +94,17 @@
 
     display: block;
 
-    width: 30px;
-    height: 30px;
+    width: 1em;
+    height: 1em;
     &::before,
     &::after {
       position: absolute;
       z-index: 100;
-      top: 15px;
+      top: 10px;
       left: -5px;
 
-      width: 42px;
-      height: 3px;
+      width: 1.3em;
+      height: 4px;
 
       content: "";
 
@@ -116,7 +123,7 @@
     .main-navigation {
       display: block;
       position: absolute;
-      z-index:100px;
+      z-index:100;
       top:80px;
       left:0;
       background-color: #ffcf08;

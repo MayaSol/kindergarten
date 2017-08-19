@@ -9,6 +9,8 @@
 
 get_header(); ?>
 
+  <h1>Single</h1>
+
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
@@ -17,7 +19,9 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
-			the_post_navigation();
+			the_post_navigation(array(
+        'prev_text' => '<span class="kindergarten-btn">%title</span>')
+      );
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -31,5 +35,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

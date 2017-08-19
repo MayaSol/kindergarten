@@ -1,8 +1,37 @@
+html {
+  font-size: $html-size-base;
+}
+
 body {
   min-width: $screen-mobile;
   font-family: $font-family-main;
+  font-size: 1.4rem;
+  line-height: 2rem;
 
   h1 {
     font-family: $font-family-titles;
+    line-height: 2em;
+    letter-spacing: 0.1em;
+  }
+  h2 {
+    letter-spacing: 0.1em;
+  }
+}
+
+.entry-header {
+  @include container;
+}
+
+.entry-content {
+  @include container;
+}
+
+.entry-title {
+  font-family: $font-family-titles;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3.6rem;
+  a {
+    text-decoration: none;
   }
 }

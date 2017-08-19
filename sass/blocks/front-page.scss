@@ -1,0 +1,45 @@
+.site-main--front-page  .post-short--front {
+    padding-bottom: 33px;
+
+    a {
+      color: #ffffff;
+    }
+
+    &:nth-of-type(4n+1) {
+      border-top: 5px solid #f29f34;;
+      border-bottom: 24px solid #f29f34;
+      background-color: #efc043;
+      .kindergarten-btn {
+        background-color: #61cbe6;
+      }
+    }
+
+    &:nth-of-type(4n+2) {
+      border-top: 5px solid #f29f34;;
+      border-bottom: 24px solid #f29f34;
+      background-color: #f8db54;
+      .kindergarten-btn {
+        background-color: #61cbe6;
+      }
+    }
+
+    &:nth-of-type(4n+3) {
+      border-top: 5px solid #c2b130;
+      border-bottom: 24px solid #c2b130;
+      background-color: #d5c651;
+      .kindergarten-btn {
+        background-color: #ef4b53;
+      }
+    }
+
+    &:nth-of-type(4n+4) {
+      border-bottom: 5px solid #e25a00;;
+      border-bottom: 24px solid #e25a00;;
+      background-color: #eb7400;
+      .kindergarten-btn {
+        background-color: #2aae4a;
+      }
+    }
+
+  }
+

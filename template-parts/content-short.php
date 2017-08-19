@@ -9,7 +9,13 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<?php
+  if (is_front_page()) {
+    $kindergarden_classes[] = "post-short--front";
+  }
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class($kindergarden_classes); ?> >
   <header class="entry-header">
     <?php
       the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -18,6 +24,7 @@
 
 
   <div class="entry-content">
+
     <?php
       the_post_thumbnail("thumbnail");
       the_excerpt( sprintf(
@@ -26,7 +33,7 @@
           __( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'kindergarten' ),
           array(
             'span' => array(
-              'class' => array(),
+            'class' => array(),
             ),
           )
         ),
@@ -37,7 +44,17 @@
         'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kindergarten' ),
         'after'  => '</div>',
       ) );
+
+      if (($post->post_name) == "contacts")
+      {
+        $read_more_text = "Как добраться...";
+      }
+      else {
+        $read_more_text = "Подробнее...";
+      };
     ?>
+
+    <a href="<?php echo get_permalink(); ?>" class="kindergarten-btn"> <?php echo $read_more_text ?></a>
   </div><!-- .entry-content -->
 
 

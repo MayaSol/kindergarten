@@ -1,0 +1,19 @@
+.socials  {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    margin:0;
+    padding: 0;
+    list-style: none;
+  }
+
+  @media #{$mobile-widths-only} {
+    ul li {
+    margin: auto;
+    }
+    ul {
+      margin-bottom: 28px;
+    }
+  }
+
+}

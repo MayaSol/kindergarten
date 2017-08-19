@@ -1,0 +1,14 @@
+
+.site-footer {
+  background-color: #f7d34f;
+  border-top: 2px solid #f09e01;
+  border-bottom: 2px solid #f09e01;
+  padding-top: 34px;
+  padding-bottom: 28px;
+}
+
+@media #{$mobile-widths-only} {
+  .site-footer .main-menu--secondary {
+    display: none;
+  }
+}

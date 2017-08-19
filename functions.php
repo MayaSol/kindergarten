@@ -175,7 +175,7 @@ function kindergarten_add_login_logout_link($items, $args) {
 
     ob_end_clean();
 
-    $items .= '<li class="kindergarten-loginout">'. $loginoutlink .'</li>';
+    $items .= '<li class="kindergarten-loginout menu-item">'. $loginoutlink .'</li>';
 
   }
 

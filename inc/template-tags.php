@@ -26,13 +26,13 @@ function kindergarten_posted_on() {
 
   $posted_on = sprintf(
     /* translators: %s: post date. */
-    esc_html_x( 'Posted on %s', 'post date', 'kindergarten' ),
+    esc_html_x( '%s', 'post date', 'kindergarten' ),
     '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
   );
 
   $byline = sprintf(
     /* translators: %s: post author. */
-    esc_html_x( 'by %s', 'post author', 'kindergarten' ),
+    esc_html_x( '%s', 'post author', 'kindergarten' ),
     '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
   );
 
