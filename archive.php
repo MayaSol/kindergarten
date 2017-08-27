@@ -9,8 +9,10 @@
 
 get_header(); ?>
 
+Archive
+
 	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+		<main id="main" class="site-main  page-archive">
 
 		<?php
 		if ( have_posts() ) : ?>
@@ -31,11 +33,15 @@ get_header(); ?>
 				 * If you want to override this in a child theme, then include a file
 				 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 				 */
-				get_template_part( 'template-parts/content', get_post_format() );
+				get_template_part( 'template-parts/content', 'short' );
 
 			endwhile;
 
-			the_posts_navigation();
+			the_posts_navigation(array(
+        'prev_text' => '<span class="screen-reader-text">Предыдущие</span>'.
+        '<span class="nav-title  kindergarten-btn"><span class="nav-title-icon-wrapper"><svg class="icon icon-arrow-left" "aria-hidden="true" role="img"> <use href="" xlink:href=""></use> </svg></span>Предыдущие</span>',
+        'next_text' => '<span class="screen-reader-text">Следующие</span>'.
+        '<span class="nav-title  kindergarten-btn"><span class="nav-title-icon-wrapper"><svg class="icon icon-arrow-right" "aria-hidden="true" role="img"> <use href="" xlink:href=""></use> </svg></span>Следующие</span>'));
 
 		else :
 
@@ -47,5 +53,4 @@ get_header(); ?>
 	</div><!-- #primary -->
 
 <?php
-get_sidebar();
 get_footer();

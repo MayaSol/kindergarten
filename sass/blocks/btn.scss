@@ -2,7 +2,7 @@
   display: inline-block;
   font-weight: 400;
   text-align: center;
-  white-space: nowrap;
+  white-space: word-wrap;
   vertical-align: middle;
   user-select: none;
   border: none;
@@ -12,6 +12,7 @@
   border-radius: 2px;
   text-transform: uppercase;
   text-decoration: none;
+  box-shadow: none;
 /*  @include transition($btn-transition);*/
 
   //&hover and focus styles

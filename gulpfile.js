@@ -17,6 +17,7 @@ gulp.task("copy", function() {
   return gulp.src([
     "fonts/**",
     "inc/**",
+    "img/**",
     "languages/**",
     "layouts/**",
     "js/**",

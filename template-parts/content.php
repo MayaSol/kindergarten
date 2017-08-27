@@ -9,8 +9,6 @@
 
 ?>
 
-<h2>Content</h2>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
   <header class="entry-header">
     <?php
@@ -43,8 +41,6 @@
         ),
         get_the_title()
       ) );
-
-      echo "Test";
 
       wp_link_pages( array(
         'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kindergarten' ),
