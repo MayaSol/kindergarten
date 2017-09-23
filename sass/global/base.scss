@@ -41,6 +41,10 @@ body {
   }
 }
 
+svg {
+  height: 0;
+}
+
 @media #{$tablet-widths} {
   .site {
     background-image: url("img/bg-linedpaper.jpg");

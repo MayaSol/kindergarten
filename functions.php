@@ -182,3 +182,8 @@ function kindergarten_add_login_logout_link($items, $args) {
 
     return $items;
 }
+
+/**
+ * SVG icons functions and filters.
+ */
+require get_parent_theme_file_path( '/inc/icon-functions.php' );

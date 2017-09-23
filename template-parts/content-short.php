@@ -6,6 +6,8 @@
  *
  * @package kindergarten
  */
+
+$kindergarten_classes = "";
 if (is_home()) {
   $kindergarten_classes = "post-home";
 };

@@ -7,16 +7,18 @@
     list-style: none;
   }
 
-  .socials-vk a{
+  a {
     display: block;
-    width: 31px;
-    height: 31px;
-    text-indent: -9999px;
     svg {
       width: 100%;
       height: 100%;
-      fill: #ef4b53;
+      color: #ef4b53;
     }
+  }
+
+  .socials-vk a {
+    width: 31px;
+    height: 31px;
   }
 
   @media #{$mobile-widths-only} {

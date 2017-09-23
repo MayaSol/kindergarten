@@ -7,7 +7,10 @@ var run = require("run-sequence");
 var plumber = require("gulp-plumber");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
-
+var svgmin = require("gulp-svgmin");
+var svgstore = require("gulp-svgstore");
+var rename = require("gulp-rename");
+var inject = require("gulp-inject");
 
 gulp.task("clean", function() {
   return del("/var/www/govorunchik/wp-content/themes/kindergarten/*",{force:true});
@@ -31,6 +34,27 @@ gulp.task("copy", function() {
   .pipe(gulp.dest("/var/www/govorunchik/wp-content/themes/kindergarten/"));
 });
 
+gulp.task("svgsprite", function() {
+  var sources = gulp
+  .src("img/icons/*.svg")
+  .pipe(svgstore({
+      inlineSvg: true
+    }));
+
+  var target = gulp.src("src/inline-svg.html");
+
+  return target.pipe(inject(sources,
+    {
+      transform: function (filePath, file) {
+      // return file contents as string
+      return file.contents.toString()
+      }
+    }))
+  .pipe(rename("svg-icons.svg"))
+  .pipe(gulp.dest("/var/www/govorunchik/wp-content/themes/kindergarten/img/"));
+});
+
+
 gulp.task("style", function() {
   gulp.src("sass/style.scss")
     .pipe(plumber())
@@ -46,6 +70,7 @@ gulp.task("style", function() {
 gulp.task("build", function(fn) {
   run("clean",
       "copy",
+      "svgsprite",
       "style",
       fn);
 });

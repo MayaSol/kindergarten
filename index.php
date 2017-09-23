@@ -12,9 +12,7 @@
  * @package kindergarten
  */
 
-get_header(); ?>
-
-Index
+get_header();?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
