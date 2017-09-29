@@ -4,19 +4,18 @@ $line-height: 2rem;
 $font-family-main: "ComfortaaRegular", Arial, sans-serif;
 $font-family-titles: "SuplexmentaryComicNc", Arial, sans-serif;
 
-
 $container-mobile: 260px;
-$container-tablet: 668px;
-$container-desktop: 1050px;
-
+$container-tablet: 671px;
+$container-desktop: 1170px;
 
 $screen-mobile: 320px;
 $screen-tablet: 768px;
-$screen-desktop: 1150px;
-
+$screen-desktop: 1170px;
 
 $mobile-widths-only: "(max-width: 767px)";
 $tablet-widths: "(min-width: #{$screen-tablet})";
 $desktop-widths: "(min-width: #{$screen-desktop})";
 
 $retina: "(min-resolution: 144dpi),(min-resolution: 1.5dppx)";
+
+$color-bg-main: #f7e090;

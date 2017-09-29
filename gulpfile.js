@@ -43,7 +43,8 @@ gulp.task("svgsprite", function() {
 
   var target = gulp.src("src/inline-svg.html");
 
-  return target.pipe(inject(sources,
+  return target.pipe(inject(
+    sources,
     {
       transform: function (filePath, file) {
       // return file contents as string

@@ -1,0 +1,96 @@
+.slider-main {
+  display: none;
+}
+
+@media #{$desktop-widths} {
+
+  .slider-main {
+    position: absolute;
+    display: block;
+    top: 128px;
+    left: 181px;
+    width: 670px;
+    height: 397px;
+    background-image: url("img/cloud.svg"), url("img/shadow.svg");
+    background-size: 100% 390px, 100% 390px;
+    background-position: center top 0, center top 7px;
+    background-repeat: no-repeat, no-repeat;
+    z-index: 100;
+  }
+
+  .slider__btns {
+    position: absolute;
+    bottom: 0;
+    right: 106px;
+    font-size: 0;
+  }
+
+  .slider__btn {
+    position: relative;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #f8e94c;
+
+    &--prev {
+      margin-right: 4px;
+      @include arrow("left", 2px, 8px, #ffffff);
+    }
+
+    &--next {
+      @include arrow("right", 2px, 8px, #ffffff);
+    }
+  }
+
+  .slider__toggles-wrapper {
+    position: absolute;
+    width: 103px;
+    height: 65px;
+    left: -126px;
+    top: 163px;
+    background-image: url("img/cloud.svg"),url("img/shadow.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 61px, 100% 61px;
+    background-position: center top, center top 4px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top:-67px;
+      left: 34px;
+      width: 61px;
+      height: 67px;
+      background-image: url("img/bird@1x.png");
+      background-size: contain;
+      background-position: center center;
+    }
+}
+
+  .slider__toggles {
+    position: absolute;
+    top: 29px;
+    left: 20px;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    font-size: 0;
+}
+
+  .slider__toggle {
+      display: inline-block;
+      margin: 0;
+      margin-right: 4px;
+      padding: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: #f8db54;
+
+      &--active {
+        background-color: #bad900;
+      }
+  }
+
+
+}

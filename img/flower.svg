@@ -1,0 +1,57 @@
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg64"
+   width="85.333336"
+   height="74.666664"
+   viewBox="0 0 85.333336 74.666664"
+>
+  <circle
+     id="petal01"
+     cx="27.224804"
+     cy="16.062016"
+     r="15.689921"
+     fill="#ffcf00"
+     style="stroke-width:1.82014394" />
+  <circle
+     id="petal02"
+     cx="54.821705"
+     cy="14.883719"
+     r="15.689921"
+     fill="#ffcf00"
+     style="stroke-width:1.82014394" />
+  <circle
+     id="petal03"
+     cx="69.829453"
+     cy="36.093021"
+     r="15.689921"
+     fill="#ffcf00"
+     style="stroke-width:1.82014394" />
+  <circle
+     id="petal04"
+     cx="58.790695"
+     cy="57.79845"
+     r="15.689921"
+     fill="#ffcf00"
+     style="stroke-width:1.82014394" />
+  <circle
+     id="petal05"
+     cx="31.255812"
+     cy="59.162788"
+     r="15.689921"
+     fill="#ffcf00"
+     style="stroke-width:1.82014394" />
+  <circle
+     id="petal06"
+     cx="15.627907"
+     cy="39.44186"
+     r="15.689921"
+     fill="#ffcf00"
+     style="stroke-width:1.82014394" />
+  <circle
+     id="center"
+     cx="42.790695"
+     cy="36.713177"
+     r="15.255813"
+     fill="#fb001d"
+     style="stroke-width:1.76978421" />
+</svg>

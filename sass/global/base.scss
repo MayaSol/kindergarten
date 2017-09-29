@@ -20,7 +20,7 @@ body {
 }
 
 .site {
-  background-color: #f4edd5;
+  background-color: $color-bg-main;
 }
 
 .entry-header {
@@ -45,10 +45,14 @@ svg {
   height: 0;
 }
 
+
 @media #{$tablet-widths} {
+
   .site {
     background-image: url("img/bg-linedpaper.jpg");
     background-repeat: repeat;
+    background-color: transparent;
   }
+
 }
 

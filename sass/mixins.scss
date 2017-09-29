@@ -20,3 +20,31 @@
     clear: both;
   }
 }
+
+@mixin arrow($direction: "left", $border-width: 3px, $padding: 3px, $color: #000000) {
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border: solid $color;
+    border-width: 0 $border-width $border-width 0;
+    display: inline-block;
+    padding: $padding;
+
+    @if ( $direction == "left" ) {
+      transform: translate(-25%, -50%) rotate(135deg);
+    }
+    @else if ( $direction == "right" ) {
+      transform: translate(-75%, -50%) rotate(-45deg);
+}
+    @else if ( $direction == "up" ) {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    @else if ( $direction == "down" ) {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}

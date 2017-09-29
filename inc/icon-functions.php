@@ -12,7 +12,7 @@
  */
 function kindergarten_include_svg_icons() {
 	// Define SVG sprite file.
-	$svg_icons = get_parent_theme_file_path( '/img/svg-icons.svg' );
+	$svg_icons = get_parent_theme_file_path( "/img/svg-icons.svg" );
 
 	// If it exists, include it.
 	if ( file_exists( $svg_icons ) ) {

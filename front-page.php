@@ -10,6 +10,21 @@
 
 get_header(); ?>
 
+  <div class="slider  slider-main">
+    <div class="slider__toggles-wrapper">
+      <ul class="slider__toggles">
+        <li class="slider__toggle  slider__toggle--active"></li>
+        <li class="slider__toggle"></li>
+        <li class="slider__toggle"></li>
+        <li class="slider__toggle"></li>
+      </ul>
+    </div>
+    <div class="slider__btns">
+      <a class="slider__btn  slider__btn--prev"></a>
+      <a class="slider__btn  slider__btn--next"></a>
+    </div>
+  </div>
+
   <div id="primary" class="content-area">
     <main id="main" class="site-main  site-main--front-page">
 
