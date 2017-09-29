@@ -188,14 +188,15 @@
     background-size: 100% auto;
     background-position: center top -75px;
     background-repeat: no-repeat;
-    z-index: 90;
-  }
+    z-index: 10;
+    }
 
   .menu-primary-menu-container {
     display: flex;
     width: 262px;
     height: 262px;
     margin-left: 168px;
+    z-index: 100;
   }
 
   .main-navigation .primary-menu--top {
@@ -203,6 +204,7 @@
     align-content: center;
     flex-wrap: wrap;
     width: 180px;
+    z-index: 999;
     .menu-item {
       float: none;
       display: block;

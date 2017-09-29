@@ -46,8 +46,9 @@
 @media #{$tablet-widths} {
 
   .site-main--front-page {
-    margin-top: 644px;
-  }
+    margin-top: 263px;
+    display: flex;
+}
 
 
 }

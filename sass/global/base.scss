@@ -23,14 +23,6 @@ body {
   background-color: $color-bg-main;
 }
 
-.entry-header {
-  @include container;
-}
-
-.entry-content {
-  @include container;
-}
-
 .entry-title {
   font-family: $font-family-titles;
   font-size: 3rem;
@@ -43,6 +35,17 @@ body {
 
 svg {
   height: 0;
+}
+
+@media #{$mobile-widths-only} {
+
+  .entry-header {
+    @include container;
+  }
+
+  .entry-content {
+    @include container;
+  }
 }
 
 

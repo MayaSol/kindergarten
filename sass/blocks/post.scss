@@ -103,4 +103,49 @@
       }
 
   }
+
+}
+
+@media #{$tablet-widths} {
+
+  .site-main--front-page .post-short {
+    width: 270px;
+    box-sizing: content-box;
+  }
+
+  .post-short {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+
+    .entry-header {
+      width: 210px;
+      margin: 0 auto;
+      h2 {
+        margin-top: 37px;
+        margin-bottom: 18px;
+      }
+     }
+
+    .entry-content {
+      width: 210px;
+      margin: 0 auto;
+      flex-grow: 1;
+      display :flex;
+      flex-direction: column;
+    }
+
+    .kindergarten-btn {
+      margin-top: auto;
+      align-self: flex-start;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+
+  }
+
+
 }

@@ -5,17 +5,17 @@
 @media #{$desktop-widths} {
 
   .slider-main {
-    position: absolute;
     display: block;
-    top: 128px;
-    left: 181px;
+    position: absolute;
+    left: 170px;
+    top: -258px;
     width: 670px;
     height: 397px;
     background-image: url("img/cloud.svg"), url("img/shadow.svg");
     background-size: 100% 390px, 100% 390px;
     background-position: center top 0, center top 7px;
     background-repeat: no-repeat, no-repeat;
-    z-index: 100;
+    z-index: 50;
   }
 
   .slider__btns {

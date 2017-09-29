@@ -7,9 +7,9 @@
  * @package kindergarten
  */
 
-$kindergarten_classes = "";
+$kindergarten_classes = ["post-short"];
 if (is_home()) {
-  $kindergarten_classes = "post-home";
+  $kindergarten_classes[] = "post-home";
 };
 
 ?>

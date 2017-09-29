@@ -1,0 +1,14 @@
+@media #{$tablet-widths} {
+
+  .site-content {
+    position: relative;
+    margin-top: 386px;
+    @include container;
+    background-image: url("img/tree@1x.png");
+    background-repeat: no-repeat;
+    background-size: 460px 613px;
+    background-position: top 87px right 0;
+    z-index: 50;
+  }
+
+}
