@@ -11,43 +11,58 @@
 
 ?>
 
-  <div class="content-decor">
+  </div><!-- #content -->
+
+  <div class="site-decor">
   </div>
 
-	</div><!-- #content -->
+  <footer id="colophon" class="site-footer">
 
-	<footer id="colophon" class="site-footer">
+    <div class="site-footer__row-top">
+      <div class="site-footer__inner">
 
-    <div class="socials">
-      <?php
-        wp_nav_menu( array(
-          'theme_location' => 'socials-menu',
-          'menu_id'        => 'socials',
-          'link_before'    => '<span class="screen-reader-text">',
-          'link_after'     => '</span>'
-        ) );
-      ?>
+        <div class="socials">
+          <?php
+            wp_nav_menu( array(
+              'theme_location' => 'socials-menu',
+              'menu_id'        => 'socials',
+              'link_before'    => '<span class="screen-reader-text">',
+              'link_after'     => '</span>'
+            ) );
+          ?>
+        </div>
+
+        <div class="menu-secondary">
+          <?php
+            wp_nav_menu( array(
+              'theme_location' => 'secondary-menu',
+              'menu_id'        => 'secondary'
+            ) );
+          ?>
+        </div>
+
+      </div>
     </div>
-    <div class="main-menu  main-menu--secondary">
-      <?php
-        wp_nav_menu( array(
-          'theme_location' => 'secondary-menu',
-          'menu_id'        => 'secondary'
-        ) );
-      ?>
+
+    <div class="site-footer__row-bottom">
+      <div class="site-footer__inner">
+
+      <div class="site-info">
+        <a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kindergarten' ) ); ?>"><?php
+          /* translators: %s: CMS name, i.e. WordPress. */
+          printf( esc_html__( 'Proudly powered by %s', 'kindergarten' ), 'WordPress' );
+        ?></a>
+        <span class="sep"> | </span>
+        <?php
+          /* translators: 1: Theme name, 2: Theme author. */
+          printf( esc_html__( 'Theme: %1$s by %2$s.', 'kindergarten' ), 'kindergarten', '<a href="https://automattic.com/">Underscores.me</a>' );
+        ?>
+        </div>
+      </div><!-- .site-info -->
+
     </div>
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kindergarten' ) ); ?>"><?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'kindergarten' ), 'WordPress' );
-			?></a>
-			<span class="sep"> | </span>
-			<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'kindergarten' ), 'kindergarten', '<a href="https://automattic.com/">Underscores.me</a>' );
-			?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+
+  </footer><!-- #colophon -->
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

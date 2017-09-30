@@ -1,14 +1,24 @@
-@media #{$tablet-widths} {
-
-  .site-content {
+@media #{$tablet-widths}
+{
+  .site-content
+  {
     position: relative;
+    z-index: 50;
+
     margin-top: 386px;
+    margin-bottom: 14px;
+
     @include container;
+  }
+}
+
+@media #{$desktop-widths}
+{
+  .site-content
+  {
+    min-height: 613px + 87px;
     background-image: url("img/tree@1x.png");
     background-repeat: no-repeat;
-    background-size: 460px 613px;
     background-position: top 87px right 0;
-    z-index: 50;
-  }
-
+    background-size: 460px 613px;  }
 }
