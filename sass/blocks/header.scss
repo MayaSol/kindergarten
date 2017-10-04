@@ -220,7 +220,7 @@
     position: absolute;
     z-index: 10;
     top: 0;
-    right: 0;
+    right: -150px;
 
     width: 570px;
     height: 386px;
@@ -275,5 +275,13 @@
         display: none;
       }
     }
+  }
+}
+
+@media #{$desktop-widths}
+{
+  .main-navigation
+  {
+    right: 0;
   }
 }

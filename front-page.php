@@ -26,7 +26,7 @@ get_header(); ?>
   </div>
 
   <div id="primary" class="content-area">
-    <main id="main" class="site-main  site-main--front-page">
+    <main id="main" class="site-main">
 
 <?php
     $args = [

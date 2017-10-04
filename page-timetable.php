@@ -14,8 +14,6 @@
 
 get_header(); ?>
 
-<h1> Page timetable</h1>
-
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
 

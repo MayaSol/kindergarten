@@ -7,14 +7,9 @@
  * @package kindergarten
  */
 
-$kindergarten_classes = ["post-short"];
-if (is_home()) {
-  $kindergarten_classes[] = "post-home";
-};
-
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class($kindergarten_classes); ?> >
+<article id="post-<?php the_ID(); ?>" <?php post_class("post-short"); ?> >
   <header class="entry-header">
     <?php
       the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );

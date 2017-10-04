@@ -1,6 +1,6 @@
 @media #{$tablet-widths}
 {
-  .site-main--front-page
+  .home .site-main
   {
     display: flex;
 
@@ -9,7 +9,7 @@
 }
 
 @media #{$desktop-widths} {
-  .site-main--front-page
+  .home .site-main
   {
     margin-top: 263px;
   }

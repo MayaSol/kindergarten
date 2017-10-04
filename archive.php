@@ -9,8 +9,6 @@
 
 get_header(); ?>
 
-Archive
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main  page-archive">
 

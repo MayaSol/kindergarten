@@ -24,30 +24,34 @@
   }
 }
 
-.post-home:not(:first-of-type)
+.blog,
+.archive
 {
-  position: relative;
-
-  padding-top: 17px;
-
-  border-top: 1px solid #fec42b;
-  &::before
+  .post:not(:first-of-type)
   {
-    position: absolute;
-    top: -14px;
-    left: 50%;
+    position: relative;
 
-    width: 65px;
-    height: 28px;
-    margin-left: -32px;
+    padding-top: 17px;
 
-    content: "";
+    border-top: 1px solid #fec42b;
+    &::before
+    {
+      position: absolute;
+      top: -14px;
+      left: 50%;
 
-    background-color: $color-bg-main;
-    background-image: url("img/flower.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
+      width: 65px;
+      height: 28px;
+      margin-left: -32px;
+
+      content: "";
+
+      background-color: $color-bg-main;
+      background-image: url("img/flower.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;
+    }
   }
 }
 
@@ -59,7 +63,6 @@
 .site-main .posts-navigation,
 .site-main .post-navigation
 {
-  @include container;
   .nav-links
   {
     display: flex;
@@ -117,6 +120,21 @@
       display: block;
 
       width: 100%;
+    }
+  }
+}
+
+@media #{$tablet-widths}
+{
+  .blog,
+  .archive
+  {
+    .post:not(:first-of-type)
+    {
+      &::before
+      {
+        background-color: #ffffff;
+      }
     }
   }
 }

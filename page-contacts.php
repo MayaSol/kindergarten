@@ -14,8 +14,6 @@
 
 get_header(); ?>
 
-<h1> Page </h1>
-
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
 
@@ -32,10 +30,11 @@ get_header(); ?>
       endwhile; // End of the loop.
       ?>
 
+    <div id="map" class="kindergarten-map"></div>
+
     </main><!-- #main -->
   </div><!-- #primary -->
 
-  <div id="map" class="kindergarten-map"></div>
 
 <?php
 get_footer();

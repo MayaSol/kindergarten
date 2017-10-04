@@ -160,6 +160,8 @@ require get_template_directory() . '/inc/jetpack.php';
 
 add_post_type_support( 'page', 'excerpt' );
 
+/**/
+
 add_filter('wp_nav_menu_items', 'kindergarten_add_login_logout_link', 10, 2);
 
 function kindergarten_add_login_logout_link($items, $args) {
@@ -181,6 +183,19 @@ function kindergarten_add_login_logout_link($items, $args) {
 
 
     return $items;
+}
+
+/*Add class if page is not a front page*/
+
+add_filter( 'body_class', 'kindergarten_inner_page_class' );
+
+function  kindergarten_inner_page_class( $classes ) {
+
+  if ( !(is_front_page()) and (is_page())) {
+    $classes[] = "page-inner";
+  };
+
+  return $classes;
 }
 
 /**

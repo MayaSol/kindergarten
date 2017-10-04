@@ -1,4 +1,4 @@
-.site-main--front-page  .post-short
+.home  .post-short
 {
   padding-bottom: 33px;
   a
@@ -49,7 +49,7 @@
 
 @media #{$tablet-widths}
 {
-  .site-main--front-page  .post-short
+  .home  .post-short
   {
     display: flex;
     flex-direction: column;
@@ -97,7 +97,7 @@
 
 @media #{$desktop-widths}
 {
-  .site-main--front-page  .post-short
+  .home  .post-short
   {
     &:nth-last-child(2)
     {

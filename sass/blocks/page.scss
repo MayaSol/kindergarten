@@ -1,7 +1,92 @@
-.page {
-  .entry-title {
+.page
+{
+  .entry-title
+  {
     color: #61cbe6;
   }
 }
 
+@media #{$tablet-widths}
+{
+  .page-inner,
+  .blog,
+  .single,
+  .archive
+  {
+    .site-main
+    {
+      position: relative;
+      min-height: 181px;
+      padding-right: 33px;
+      padding-left: 30px;
+      background-color: #ffffff;
 
+      &::before
+      {
+        position: absolute;
+        z-index: 1;
+        top: -216px;
+        left: 0;
+
+        width: 100%;
+        height: 397px;
+
+        content: "";
+
+        background-image: url("img/cloud.svg");
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-size: 100% auto;
+      }
+    }
+
+    .post-navigation {
+      position: relative;
+      z-index: 100;
+    }
+  }
+
+    .page-inner .entry-content,
+    .blog .post,
+    .single .post,
+    .archive .post
+    {
+      position: relative;
+      z-index: 100;
+
+      margin-top: 40px;
+      margin-top: 0;
+    }
+
+  .page-inner .entry-header,
+  .blog .page-header,
+  .single .page-header,
+  .archive .page-header
+  {
+    position: absolute;
+    z-index: 100;
+    top: -94px;
+    left: 50%;
+
+    transform: translateX(-50%);
+    h1
+    {
+      margin: 0;
+    }
+  }
+}
+
+@media #{$desktop-widths}
+{
+  .page-inner,
+  .blog,
+  .single,
+  .archive
+  {
+    .site-main
+    {
+      width: 670px;
+      margin-top: 0;
+    }
+  }
+}

@@ -11,6 +11,7 @@
   &__row-top &__inner
   {
     display: flex;
+    flex-wrap: wrap;
     min-height: 89px;
     align-items: center;
   }
@@ -31,11 +32,12 @@
   .site-footer
   {
     border-bottom: none;
+    &__row-top
+    {
+      border-bottom: 2px solid #fba200;
+    }
     &__row-top &__inner
     {
-
-      border-bottom: 2px solid #fba200;
-
       justify-content: space-between;
     }
     &__row-bottom
