@@ -55,14 +55,10 @@
   }
 }
 
-.post-home:not(:last-of-type)
-{
-  padding-bottom: 23px;
-}
-
 .site-main .posts-navigation,
 .site-main .post-navigation
 {
+  margin: 0;
   .nav-links
   {
     display: flex;
