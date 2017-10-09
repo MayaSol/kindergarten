@@ -18,7 +18,7 @@ function kindergarten_include_svg_icons() {
 	if ( file_exists( $svg_icons ) ) {
 		require_once( $svg_icons );
 	}
-  error_log("kindergarten_include_svg_icons__end");
+//  error_log("kindergarten_include_svg_icons__end");
 }
 add_action( 'wp_footer', 'kindergarten_include_svg_icons', 9999 );
 
@@ -35,9 +35,9 @@ add_action( 'wp_footer', 'kindergarten_include_svg_icons', 9999 );
  * @return string SVG markup.
  */
 function kindergarten_get_svg( $args = array() ) {
-  error_log("kindergarten_get_svg__start");
-  $my_arr = print_r($args, true);
-  error_log("args = " . $my_arr);
+//  error_log("kindergarten_get_svg__start");
+//  $my_arr = print_r($args, true);
+//  error_log("args = " . $my_arr);
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
 		return __( 'Please define default parameters in the form of an array.', 'kindergarten' );
@@ -115,9 +115,9 @@ function kindergarten_get_svg( $args = array() ) {
 
 	$svg .= '</svg>';
 
-  error_log("  svg = " . $svg);
-  error_log("kindergarten_get_svg__end");
-  error_log("------------------------------------------------");
+//  error_log("  svg = " . $svg);
+//  error_log("kindergarten_get_svg__end");
+//  error_log("------------------------------------------------");
 
 	return $svg;
 }
@@ -132,12 +132,12 @@ function kindergarten_get_svg( $args = array() ) {
  * @return string  $item_output The menu item output with social icon.
  */
 function kindergarten_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
-  error_log("kindergarten_nav_menu_social_icons__start");
+/*  error_log("kindergarten_nav_menu_social_icons__start");
   error_log("  item_output: " . $item_output);
   error_log("  depth: " . $depth);
   $s_args = print_r($args, true);
   error_log("  s_args: " . $s_args);
-  error_log("  theme_location: " . $args->theme_location );
+  error_log("  theme_location: " . $args->theme_location );*/
 
 	// Get supported social icons.
 	$social_icons = kindergarten_social_links_icons();
@@ -157,10 +157,10 @@ function kindergarten_nav_menu_social_icons( $item_output, $item, $depth, $args 
 		}
 	}
 
-  error_log("  RETURN item_output" . $item_output);
+/*  error_log("  RETURN item_output" . $item_output);
 
   error_log("kindergarten_nav_menu_social_icons__end");
-  error_log("----------------------------------------");
+  error_log("----------------------------------------");*/
 	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'kindergarten_nav_menu_social_icons', 10, 4 );

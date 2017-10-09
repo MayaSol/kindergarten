@@ -1,5 +1,10 @@
 .slider-main {
   display: none;
+
+  svg
+  {
+    height: auto;
+  }
 }
 
 @media #{$desktop-widths} {
@@ -11,39 +16,39 @@
     top: -258px;
     width: 670px;
     height: 397px;
-    background-image: url("img/cloud.svg"), url("img/shadow.svg");
-    background-size: 100% 390px, 100% 390px;
-    background-position: center top 0, center top 7px;
-    background-repeat: no-repeat, no-repeat;
     z-index: 50;
   }
 
-  .slider__btns {
+  .slider__nav-wrapper {
     position: absolute;
     bottom: 0;
     right: 106px;
     font-size: 0;
   }
 
-  .slider__btn {
+  .owl-prev,
+  .owl-next {
     position: relative;
     display: inline-block;
     width: 48px;
     height: 48px;
     border-radius: 50%;
     background-color: #f8e94c;
-
-    &--prev {
-      margin-right: 4px;
-      @include arrow("left", 2px, 8px, #ffffff);
-    }
-
-    &--next {
-      @include arrow("right", 2px, 8px, #ffffff);
-    }
+    z-index: 100;
+    cursor: pointer;
   }
 
-  .slider__toggles-wrapper {
+  .owl-prev {
+    margin-right: 4px;
+    @include arrow("left", 2px, 8px, #ffffff);
+  }
+
+  .owl-next {
+    @include arrow("right", 2px, 8px, #ffffff);
+  }
+
+
+  .slider__dots-wrapper {
     position: absolute;
     width: 103px;
     height: 65px;
@@ -67,7 +72,7 @@
     }
 }
 
-  .slider__toggles {
+  .slider__dots {
     position: absolute;
     top: 29px;
     left: 20px;
@@ -77,7 +82,7 @@
     font-size: 0;
 }
 
-  .slider__toggle {
+  .owl-dot {
       display: inline-block;
       margin: 0;
       margin-right: 4px;
@@ -86,8 +91,9 @@
       height: 12px;
       border-radius: 50%;
       background-color: #f8db54;
+      cursor: pointer;
 
-      &--active {
+      &.active {
         background-color: #bad900;
       }
   }

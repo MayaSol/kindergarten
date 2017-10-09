@@ -121,11 +121,19 @@ add_action( 'widgets_init', 'kindergarten_widgets_init' );
 function kindergarten_scripts() {
 	wp_enqueue_style( 'kindergarten-style', get_stylesheet_uri() );
 
+  wp_enqueue_style( 'owl-carousel-style', get_template_directory_uri() . '/node_modules/owl.carousel/dist/assets/owl.carousel.min.css' );
+
+  wp_enqueue_style( 'owl-carousel-theme', get_template_directory_uri() . '/node_modules/owl.carousel/dist/assets/owl.theme.default.min.css' );
+
 	wp_enqueue_script( 'kindergarten-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'kindergarten-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
   wp_enqueue_script( 'kindergarten-menu-toggle', get_template_directory_uri() . '/js/menu-toggle.js', array(), '20170816', true);
+
+  wp_enqueue_script( 'owl-carousel-script', get_template_directory_uri() . '/node_modules/owl.carousel/dist/owl.carousel.min.js');
+
+//  wp_enqueue_script( 'owl-carousel-init', get_template_directory_uri() . '/js/owl-carousel-init.js');
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

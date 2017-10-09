@@ -11,18 +11,49 @@
 get_header(); ?>
 
   <div class="slider  slider-main">
-    <div class="slider__toggles-wrapper">
-      <ul class="slider__toggles">
-        <li class="slider__toggle  slider__toggle--active"></li>
-        <li class="slider__toggle"></li>
-        <li class="slider__toggle"></li>
-        <li class="slider__toggle"></li>
-      </ul>
+
+    <div class="owl-carousel">
+      <div class="item">
+        <svg width="670" height="397">
+          <defs>
+            <clipPath id="cloudView">
+              <path fill="#fff" d="m 544.4101,92.564782 a 134.41933,134.37182 0 0 0 -47.91403,5.353731 l -0.66118,-0.616896 A 157.75923,157.70347 0 0 0 225.78406,60.618709 C 218.79751,59.473056 211.65669,58.635849 204.40568,58.129118 97.998631,50.858629 6.622578,119.59777 0.34130095,211.62449 -5.9399757,303.67328 75.231753,384.19943 181.6388,391.46992 c 38.45905,2.64381 74.93453,-4.64871 106.1646,-19.38798 A 172.48166,172.4207 0 0 0 365.53696,396.58129 172.65798,172.59695 0 0 0 491.11842,354.41245 134.77196,134.72433 0 0 0 669.683,236.23401 134.794,134.74636 0 0 0 544.38806,92.564782 Z"/>
+            </clipPath>
+          </defs>
+          <image width="670" height="397" xlink:href="https://placeimg.com/670/397/animals" clip-path="url(#cloudView)"></image>
+        </svg>
+      </div>
+      <div class="item">
+        <svg width="670" height="397">
+          <defs>
+            <clipPath id="cloudView">
+              <path fill="#fff" d="m 544.4101,92.564782 a 134.41933,134.37182 0 0 0 -47.91403,5.353731 l -0.66118,-0.616896 A 157.75923,157.70347 0 0 0 225.78406,60.618709 C 218.79751,59.473056 211.65669,58.635849 204.40568,58.129118 97.998631,50.858629 6.622578,119.59777 0.34130095,211.62449 -5.9399757,303.67328 75.231753,384.19943 181.6388,391.46992 c 38.45905,2.64381 74.93453,-4.64871 106.1646,-19.38798 A 172.48166,172.4207 0 0 0 365.53696,396.58129 172.65798,172.59695 0 0 0 491.11842,354.41245 134.77196,134.72433 0 0 0 669.683,236.23401 134.794,134.74636 0 0 0 544.38806,92.564782 Z"/>
+            </clipPath>
+          </defs>
+          <image width="670" height="397" xlink:href="https://placeimg.com/670/397/animals" clip-path="url(#cloudView)"></image>
+        </svg>
+      </div>
+      <div class="item">
+        <svg width="670" height="397">
+          <defs>
+            <clipPath id="cloudView">
+              <path fill="#fff" d="m 544.4101,92.564782 a 134.41933,134.37182 0 0 0 -47.91403,5.353731 l -0.66118,-0.616896 A 157.75923,157.70347 0 0 0 225.78406,60.618709 C 218.79751,59.473056 211.65669,58.635849 204.40568,58.129118 97.998631,50.858629 6.622578,119.59777 0.34130095,211.62449 -5.9399757,303.67328 75.231753,384.19943 181.6388,391.46992 c 38.45905,2.64381 74.93453,-4.64871 106.1646,-19.38798 A 172.48166,172.4207 0 0 0 365.53696,396.58129 172.65798,172.59695 0 0 0 491.11842,354.41245 134.77196,134.72433 0 0 0 669.683,236.23401 134.794,134.74636 0 0 0 544.38806,92.564782 Z"/>
+            </clipPath>
+          </defs>
+          <image width="670" height="397" xlink:href="https://placeimg.com/670/397/animals" clip-path="url(#cloudView)"></image>
+        </svg>
+      </div>
     </div>
-    <div class="slider__btns">
-      <a class="slider__btn  slider__btn--prev"></a>
-      <a class="slider__btn  slider__btn--next"></a>
-    </div>
+
+      <div class="slider__dots-wrapper">
+        <ul id="slider-dots" class="owl-dots slider__dots">
+        </ul>
+      </div>
+      <div id="slider-nav" class="owl-nav  slider__nav-wrapper">
+        <!--a class="slider__nav  slider__nav--prev  owl-prev"></a>
+        <a class="slider__nav  slider__nav--next  owl-next"></a-->
+      </div>
+
   </div>
 
   <div id="primary" class="content-area">
