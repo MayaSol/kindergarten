@@ -1,4 +1,5 @@
-.slider-main {
+.slider-main
+{
   display: none;
 
   svg
@@ -7,96 +8,134 @@
   }
 }
 
-@media #{$desktop-widths} {
-
-  .slider-main {
-    display: block;
+@media #{$desktop-widths}
+{
+  .slider-main
+  {
     position: absolute;
-    left: 170px;
+    z-index: 50;
     top: -258px;
+    left: 170px;
+
+    display: block;
+
     width: 670px;
     height: 397px;
-    z-index: 50;
   }
 
-  .slider__nav-wrapper {
+  .slider__nav-wrapper
+  {
     position: absolute;
-    bottom: 0;
     right: 106px;
+    bottom: 0;
+
     font-size: 0;
-  }
 
-  .owl-prev,
-  .owl-next {
-    position: relative;
-    display: inline-block;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background-color: #f8e94c;
-    z-index: 100;
-    cursor: pointer;
-  }
+    .owl-prev,
+    .owl-next
+    {
+      position: relative;
+      z-index: 100;
 
-  .owl-prev {
-    margin-right: 4px;
-    @include arrow("left", 2px, 8px, #ffffff);
-  }
-
-  .owl-next {
-    @include arrow("right", 2px, 8px, #ffffff);
-  }
-
-
-  .slider__dots-wrapper {
-    position: absolute;
-    width: 103px;
-    height: 65px;
-    left: -126px;
-    top: 163px;
-    background-image: url("img/cloud.svg"),url("img/shadow.svg");
-    background-repeat: no-repeat;
-    background-size: 100% 61px, 100% 61px;
-    background-position: center top, center top 4px;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top:-67px;
-      left: 34px;
-      width: 61px;
-      height: 67px;
-      background-image: url("img/bird@1x.png");
-      background-size: contain;
-      background-position: center center;
-    }
-}
-
-  .slider__dots {
-    position: absolute;
-    top: 29px;
-    left: 20px;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-size: 0;
-}
-
-  .owl-dot {
       display: inline-block;
-      margin: 0;
-      margin-right: 4px;
-      padding: 0;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background-color: #f8db54;
+
+      width: 48px;
+      height: 48px;
+
       cursor: pointer;
 
-      &.active {
-        background-color: #bad900;
+      border-radius: 50%;
+      background-color: #f8e94c;
+
+      &:hover
+      {
+        background-color: lighten(#f8e94c, 10%);
       }
+
+      &:active
+      {
+        background-color: darken(#f8e94c, 25%);
+      }
+    }
+
+    .owl-prev
+    {
+      margin-right: 4px;
+
+      @include arrow("left", 2px, 8px, #ffffff);
+    }
+
+    .owl-next
+    {
+      @include arrow("right", 2px, 8px, #ffffff);
+    }
   }
 
+  .slider__dots-wrapper
+  {
+    position: absolute;
+    top: 163px;
+    left: -126px;
 
+    width: 103px;
+    height: 65px;
+
+    background-image: url("img/cloud.svg"),url("img/shadow.svg");
+    background-repeat: no-repeat;
+    background-position: center top, center top 4px;
+    background-size: 100% 61px, 100% 61px;
+
+    &::before
+    {
+      position: absolute;
+      top: -67px;
+      left: 34px;
+
+      width: 61px;
+      height: 67px;
+
+      content: "";
+
+      background-image: url("img/bird@1x.png");
+      background-position: center center;
+      background-size: contain;
+    }
+  }
+
+  .slider__dots
+  {
+    position: absolute;
+    top: 29px;
+    left: 50%;
+
+    margin: 0;
+    padding: 0;
+
+    font-size: 0;
+
+    list-style-type: none;
+
+    transform: translateX(-50%);
+  }
+
+  .owl-dot
+  {
+    display: inline-block;
+
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    margin-right: 4px;
+    padding: 0;
+
+    cursor: pointer;
+
+    border-radius: 50%;
+    background-color: #f8db54;
+
+    &.active
+    {
+      background-color: #bad900;
+    }
+  }
 }

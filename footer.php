@@ -70,13 +70,14 @@
 <script type="text/javascript" charset="utf-8" async>
 jQuery(document).ready(function(){
   jQuery('.owl-carousel').owlCarousel({
-    responsive: {
-      0:{items:1}
-    }
-    ,
+    items:1,
     dotsContainer: '#slider-dots',
     navContainer: '#slider-nav',
-    nav: true
+    nav:true,
+    loop:true,
+    autoplay: true,
+    autoplayTimeout:4000,
+    animateOut: 'fadeOut'
   });
 });
 </script>
