@@ -23,9 +23,15 @@ get_header(); ?>
 
       the_post_navigation(array(
         'prev_text' => '<span class="screen-reader-text">Предыдущая запись</span>'.
-        '<span class="nav-title  kindergarten-btn"><span class="nav-title-icon-wrapper"><svg class="icon icon-arrow-left" "aria-hidden="true" role="img"> <use href="" xlink:href=""></use> </svg></span>%title</span>',
+        '<span class="nav-title  kindergarten-btn"><span class="nav-title-icon-wrapper">'
+        . kindergarten_get_svg( $args = array( 'icon' => 'arrow-left') )
+        . '</span>%title</span>',
         'next_text' => '<span class="screen-reader-text">Следующая запись</span>'.
-        '<span class="nav-title  kindergarten-btn"><span class="nav-title-icon-wrapper"><svg class="icon icon-arrow-right" "aria-hidden="true" role="img"> <use href="" xlink:href=""></use> </svg></span>%title</span>')
+        '<span class="nav-title  kindergarten-btn">%title
+        <span class="nav-title-icon-wrapper">'
+        . kindergarten_get_svg( $args = array( 'icon' => 'arrow-right') )
+        . '</span></span>'
+        )
       );
 
       // If comments are open or we have at least one comment, load up the comment template.

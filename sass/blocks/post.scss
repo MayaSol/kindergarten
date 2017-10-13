@@ -86,7 +86,7 @@
 .site-main .posts-navigation,
 .site-main .post-navigation
 {
-  margin: 0;
+  margin-bottom: 0;
   .nav-links
   {
     display: flex;
@@ -105,16 +105,44 @@
       text-decoration: none;
     }
   }
-  .nav-previous .nav-title
+  .nav-previous
   {
-    margin-bottom: 2px;
+    .nav-title
+    {
+      text-align: left;
+    }
+    .nav-title-icon-wrapper
+    {
+      margin-right: 5px;
+    }
+  }
+  .nav-next
+  {
+    .nav-title
+    {
+      text-align: right;
+    }
+    .nav-title-icon-wrapper
+    {
+      margin-left: 5px;
+    }
+  }
+  .nav-title-icon-wrapper
+  {
+    display: inline-block;
+    vertical-align: middle;
 
-    text-align: left;
+    width: 1em;
+    height: 1em;
+    margin-bottom: 0.3em;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      fill: #ffffff;
+    }
   }
-  .nav-next .nav-title
-  {
-    text-align: right;
-  }
+
   svg
   {
     width: 10px;
@@ -122,6 +150,9 @@
   }
   .nav-title
   {
+    position: relative;
+    margin-bottom: 2px;
+
     color: #ffffff;
     background-color: #00c24b;
   }
@@ -150,6 +181,19 @@
 
 @media #{$tablet-widths}
 {
+  .post .entry-content a:hover,
+  .post-navigation .kindergarten-btn:hover,
+  .posts-navigation .kindergarten-btn:hover
+  {
+      color: #ffffff;
+      text-decoration: underline;
+  }
+
+  .site-main .posts-navigation
+  {
+    margin-top: 1.5em;
+  }
+
   .blog,
   .archive
   {

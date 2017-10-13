@@ -42,9 +42,13 @@ get_header();?>
 
 			the_posts_navigation(array(
         'prev_text' => '<span class="screen-reader-text">Предыдущие</span>'.
-        '<span class="nav-title  kindergarten-btn"><span class="nav-title-icon-wrapper"><svg class="icon icon-arrow-left" "aria-hidden="true" role="img"> <use href="" xlink:href=""></use> </svg></span>Предыдущие</span>',
+        '<span class="nav-title  kindergarten-btn"><span class="nav-title-icon-wrapper">'
+         . kindergarten_get_svg( $args = array( 'icon' => 'arrow-left') )
+        . '</span>Предыдущие</span>',
         'next_text' => '<span class="screen-reader-text">Следующие</span>'.
-        '<span class="nav-title  kindergarten-btn"><span class="nav-title-icon-wrapper"><svg class="icon icon-arrow-right" "aria-hidden="true" role="img"> <use href="" xlink:href=""></use> </svg></span>Следующие</span>')
+        '<span class="nav-title  kindergarten-btn">Следующие<span class="nav-title-icon-wrapper">'
+        . kindergarten_get_svg( $args = array( 'icon' => 'arrow-right') )
+        . '</span></span>')
       );
 
 		else :
