@@ -27,7 +27,6 @@ gulp.task("copy", function() {
     "js/**",
     "template-parts/**",
     "*.php",
-    "style.css",
     "rtl.css"
   ], {
     base: "."
@@ -45,9 +44,9 @@ gulp.task("svgsprite", function() {
   .src("img/icons/*.svg")
   .pipe(svgstore({
       inlineSvg: true
-    }));
+    }))
 
-  var target = gulp.src("src/inline-svg.html");
+/*  var target = gulp.src("src/inline-svg.html");
 
   return target.pipe(inject(
     sources,
@@ -56,7 +55,7 @@ gulp.task("svgsprite", function() {
       // return file contents as string
       return file.contents.toString()
       }
-    }))
+    }))*/
   .pipe(rename("svg-icons.svg"))
   .pipe(gulp.dest("/var/www/govorunchik/wp-content/themes/kindergarten/img/"));
 });

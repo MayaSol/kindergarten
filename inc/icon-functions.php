@@ -115,10 +115,6 @@ function kindergarten_get_svg( $args = array() ) {
 
 	$svg .= '</svg>';
 
-//  error_log("  svg = " . $svg);
-//  error_log("kindergarten_get_svg__end");
-//  error_log("------------------------------------------------");
-
 	return $svg;
 }
 
@@ -132,35 +128,20 @@ function kindergarten_get_svg( $args = array() ) {
  * @return string  $item_output The menu item output with social icon.
  */
 function kindergarten_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
-/*  error_log("kindergarten_nav_menu_social_icons__start");
-  error_log("  item_output: " . $item_output);
-  error_log("  depth: " . $depth);
-  $s_args = print_r($args, true);
-  error_log("  s_args: " . $s_args);
-  error_log("  theme_location: " . $args->theme_location );*/
 
 	// Get supported social icons.
 	$social_icons = kindergarten_social_links_icons();
 
 	// Change SVG icon inside social links menu if there is supported URL.
 	if ( 'socials-menu' === $args->theme_location ) {
-    error_log("__1__");
 		foreach ( $social_icons as $attr => $value ) {
-        error_log("  attr = " . $attr);
 			if ( false !== strpos( $item_output, $attr ) ) {
           error_log("__2__ args->link_after = " . $args->link_after);
 				$item_output = str_replace( $args->link_after, '</span>' . kindergarten_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
 			}
-      else {
-          error_log("__3__");
-      }
 		}
 	}
 
-/*  error_log("  RETURN item_output" . $item_output);
-
-  error_log("kindergarten_nav_menu_social_icons__end");
-  error_log("----------------------------------------");*/
 	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'kindergarten_nav_menu_social_icons', 10, 4 );

@@ -24,16 +24,20 @@ function kindergarten_posted_on() {
     esc_html( get_the_modified_date() )
   );
 
+  $svg_time_icon = '<span class="post_icon_wrapper  post_icon_wrapper--date">' . kindergarten_get_svg( $args = array( 'icon' => 'calendar') ) . '</span>';
+
   $posted_on = sprintf(
     /* translators: %s: post date. */
     esc_html_x( '%s', 'post date', 'kindergarten' ),
-    '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+    $svg_time_icon . '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' .  $time_string . '</a>'
   );
+
+  $svg_author_icon = '<span class="post_icon_wrapper  post_icon_wrapper--author">' . kindergarten_get_svg( $args = array( 'icon' => 'person') ) . '</span>';
 
   $byline = sprintf(
     /* translators: %s: post author. */
     esc_html_x( '%s', 'post author', 'kindergarten' ),
-    '<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+    '<span class="author vcard">' . $svg_author_icon . '<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
   );
 
   echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.

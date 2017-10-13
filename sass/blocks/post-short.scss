@@ -49,6 +49,19 @@
 
 @media #{$tablet-widths}
 {
+
+  .post-short
+  {
+    .entry-content
+    {
+      a:hover
+      {
+        color: #ffffff;
+        text-decoration: underline;
+      }
+    }
+  }
+
   .home  .post-short
   {
     display: flex;
@@ -59,6 +72,42 @@
     margin-right: 30px;
     padding-right: 30px;
     padding-left: 30px;
+    &:last-child
+    {
+      display: none;
+    }
+    &:nth-last-child(2)
+    {
+      margin-right: 0;
+    }
+    &:first-of-type
+    {
+      position: relative;
+      &::before
+      {
+        content: "";
+        position: absolute;
+        top: -42px;
+        left: 36px;
+        width: 58px;
+        height: 37px;
+        background-image: url("img/bug@1x.png");
+      }
+    }
+    &:nth-of-type(2)
+    {
+      position: relative;
+      &::before
+      {
+        content: '';
+        position: absolute;
+        top:-45px;
+        left: -30px;
+        width: 63px;
+        height: 57px;
+        background-image: url("img/butterfly@1x.png");
+      }
+    }
     .entry-header
     {
       margin: 0 auto;
@@ -84,16 +133,10 @@
 
       align-self: flex-start;
     }
-    &:last-child
-    {
-      display: none;
-    }
-    &:nth-last-child(2)
-    {
-      margin-right: 0;
-    }
   }
 }
+
+
 
 @media #{$desktop-widths}
 {
