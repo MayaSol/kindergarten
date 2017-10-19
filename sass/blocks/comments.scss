@@ -1,0 +1,7 @@
+.comments-area
+{
+  a,p,li,div
+  {
+    @include dont-break-out;
+  }
+}

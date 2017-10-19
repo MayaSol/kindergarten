@@ -1,3 +1,33 @@
+.entry-content
+{
+  @include dont-break-out;
+  a,
+  p,
+  span
+  {
+    @include dont-break-out;
+  }
+}
+
+.entry-title
+{
+  @include dont-break-out;
+  a,
+  span
+  {
+    @include dont-break-out;
+  }
+}
+
+.entry-meta
+{
+  @include dont-break-out;
+  a,span
+  {
+    @include dont-break-out;
+  }
+}
+
 .post
 {
   p img
@@ -17,6 +47,7 @@
 
     color: #2aae4a;
     color: #2aae4a;
+
     a
     {
       color: #2aae4a;

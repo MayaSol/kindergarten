@@ -1,50 +1,72 @@
-@mixin container {
+@mixin container
+{
   width: $container-mobile;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 
-  @media #{$tablet-widths} {
+  @media #{$tablet-widths}
+  {
     width: $container-tablet;
   }
 
-  @media #{$desktop-widths} {
+  @media #{$desktop-widths}
+  {
     width: $container-desktop;
   }
 }
 
-@mixin clearfix {
-
-  &::after {
-    content: "";
+@mixin clearfix
+{
+  &::after
+  {
     display: table;
     clear: both;
+
+    content: "";
   }
 }
 
-@mixin arrow($direction: "left", $border-width: 3px, $padding: 3px, $color: #000000) {
-
-  &::before {
-    content: "";
-    display: block;
+@mixin arrow($direction: "left", $border-width: 3px, $padding: 3px, $color: #000000)
+{
+  &::before
+  {
     position: absolute;
     top: 50%;
     left: 50%;
-    border: solid $color;
-    border-width: 0 $border-width $border-width 0;
+
+    display: block;
     display: inline-block;
+
     padding: $padding;
 
-    @if ( $direction == "left" ) {
+    content: "";
+
+    border: solid $color;
+    border-width: 0 $border-width $border-width 0;
+
+    @if ( $direction == "left" )
+    {
       transform: translate(-25%, -50%) rotate(135deg);
     }
-    @else if ( $direction == "right" ) {
+    @else if ( $direction == "right" )
+    {
       transform: translate(-75%, -50%) rotate(-45deg);
-}
-    @else if ( $direction == "up" ) {
+    }
+    @else if ( $direction == "up" )
+    {
       transform: translate(-50%, -50%) rotate(-45deg);
     }
-    @else if ( $direction == "down" ) {
+    @else if ( $direction == "down" )
+    {
       transform: translate(-50%, -50%) rotate(45deg);
     }
   }
+}
+
+@mixin dont-break-out
+{
+  min-width: 0;
+
+  word-wrap: break-word;
+  hyphens: auto;
 }

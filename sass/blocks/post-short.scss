@@ -110,11 +110,13 @@
     }
     .entry-header
     {
-      margin: 0 auto;
+/*      margin: 0 auto;  Break-word on main doesn't work 19.10.17*/
+      margin: 0;
       h2
       {
         margin-top: 37px;
         margin-bottom: 18px;
+        text-align: center;
       }
     }
     .entry-content
