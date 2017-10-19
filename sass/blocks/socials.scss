@@ -15,6 +15,20 @@
       height: 100%;
       color: #ef4b53;
     }
+    &:hover
+    {
+      svg
+      {
+        color: saturate(darken( #ef4b53, 20%),50%);
+      }
+    }
+    &:active
+    {
+      svg
+      {
+        color: lighten(#ef4b53, 10%);
+      }
+    }
   }
 
   .socials-vk a {

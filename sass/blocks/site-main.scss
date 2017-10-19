@@ -2,6 +2,12 @@
 @media #{$tablet-widths}
 {
 
+  .site-main-inner
+  {
+    position: relative;
+    z-index: 10;
+  }
+
 .page-title,
 .page-inner .entry-title
 {

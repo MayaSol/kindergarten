@@ -5,7 +5,7 @@
     position: relative;
     z-index: 50;
 
-    margin-top: 430px;
+    margin-top: 150px;
     margin-bottom: 14px;
 
     @include container;
@@ -17,7 +17,7 @@
   .site-content
   {
     min-height: 613px + 87px;
-    margin-top: 386px;
+    margin-top: 0;
 
     background-image: url("img/tree@1x.png");
     background-repeat: no-repeat;

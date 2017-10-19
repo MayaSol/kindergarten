@@ -166,6 +166,17 @@ require get_template_directory() . '/inc/customizer.php';
  */
 require get_template_directory() . '/inc/jetpack.php';
 
+/**
+ * SVG icons functions and filters.
+ */
+require get_parent_theme_file_path( '/inc/icon-functions.php' );
+
+/**
+ * Misc common php functions
+ */
+require get_parent_theme_file_path( '/inc/common-funcions.php' );
+
+
 add_post_type_support( 'page', 'excerpt' );
 
 /**/
@@ -206,7 +217,4 @@ function  kindergarten_inner_page_class( $classes ) {
   return $classes;
 }
 
-/**
- * SVG icons functions and filters.
- */
-require get_parent_theme_file_path( '/inc/icon-functions.php' );
+

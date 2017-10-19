@@ -24,20 +24,20 @@ function kindergarten_posted_on() {
     esc_html( get_the_modified_date() )
   );
 
-  $svg_time_icon = '<span class="post_icon_wrapper  post_icon_wrapper--date">' . kindergarten_get_svg( $args = array( 'icon' => 'calendar') ) . '</span>';
+  $svg_icon_time = '<span class="icon-wrapper  icon-wrapper-date">' . kindergarten_get_svg( $args = array( 'icon' => 'calendar') ) . '</span>';
 
   $posted_on = sprintf(
     /* translators: %s: post date. */
     esc_html_x( '%s', 'post date', 'kindergarten' ),
-    $svg_time_icon . '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' .  $time_string . '</a>'
+    $svg_icon_time . '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' .  $time_string . '</a>'
   );
 
-  $svg_author_icon = '<span class="post_icon_wrapper  post_icon_wrapper--author">' . kindergarten_get_svg( $args = array( 'icon' => 'person') ) . '</span>';
+  $svg_icon_author = '<span class="icon-wrapper  icon-wrapper-author">' . kindergarten_get_svg( $args = array( 'icon' => 'person') ) . '</span>';
 
   $byline = sprintf(
     /* translators: %s: post author. */
     esc_html_x( '%s', 'post author', 'kindergarten' ),
-    '<span class="author vcard">' . $svg_author_icon . '<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+    '<span class="author vcard">' . $svg_icon_author . '<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
   );
 
   echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
@@ -103,4 +103,43 @@ function kindergarten_entry_footer() {
     '</span>'
   );
 }
+endif;
+
+if ( ! function_exists( 'kindergarten_contacts' ) ) :
+
+  function kindergarten_contacts() {
+
+    $page = get_page_by_path("contacts");
+    if ($page) {
+      $id = $page->ID;
+    }
+    else {
+      $id = get_the_ID();
+    };
+
+    echo '<section class="contacts-container"> <h2 class="contacts-title">' . esc_html( get_post_meta( $id, 'phone_01_title', true) ) . '</h2>';
+
+    $svg_icon_phone = '<span class="icon-wrapper icon-wrapper-phone">'
+    . kindergarten_get_svg( $args = array( 'icon' => 'phone') ) . '</span>';
+    $tel_01 = esc_html( get_post_meta( $id, 'phone_01_number', true) );
+    echo '<p>' . $svg_icon_phone;
+    echo '<a class="contacts-phone-tel" href="tel:' . $tel_01 . '">' . $tel_01 . '</a> ';
+    echo '<a class="contacts-phone-skype" href="skype:' . $tel_01 . '?call">' . $tel_01 . '</a> </p>';
+
+    echo '<h2 class="contacts-title">' . esc_html( get_post_meta( $id, 'phone_02_title', true) ) . '</h2>';
+
+    $tel_02 = esc_html( get_post_meta( $id, 'phone_02_number', true) );
+    echo '<p>' . $svg_icon_phone;
+    echo '<a class="contacts-phone-tel" href="tel:' . $tel_02 . '">' . $tel_01 . '</a> ';
+    echo '<a class="contacts-phone-skype" href="skype:' . $tel_02 . '?call">' . $tel_02 . '</a> </p>';
+
+    $svg_icon_map = '<p> <span class="icon-wrapper icon-wrapper-map">'
+    . kindergarten_get_svg( $args = array( 'icon' => 'map') ) . '</span>';
+    $address = nl2br( esc_html( get_post_meta( $id, 'address', true) ) );
+    echo $svg_icon_map;
+    echo $address;
+    echo '</p> </section>';
+
+  }
+
 endif;

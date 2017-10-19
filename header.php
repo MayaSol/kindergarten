@@ -30,8 +30,9 @@
       <?php
         the_custom_logo();
       ?>
-        <h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-        <a class="kindergarten-menu-toggle"></a>
+        <h1 class="site-title">
+          <a class="site-title-link" href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php kindergarten_word_to_letters(get_bloginfo( 'name' )); ?></a>
+          <a class="kindergarten-menu-toggle"></a>
         </h1>
 
         <?php

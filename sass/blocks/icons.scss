@@ -1,0 +1,32 @@
+.icon-wrapper
+{
+  display: inline-block;
+
+  width: 1em;
+  height: 1em;
+  margin-right: 5px;
+  margin-bottom: 0.3em;
+
+  vertical-align: middle;
+  svg
+  {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.icon-wrapper-date,
+.icon-wrapper-author
+{
+  svg
+  {
+    fill: #fec42a;
+  }
+}
+
+.icon-wrapper-phone,
+.icon-wrapper-map
+{
+    fill: #363636;
+}
+
