@@ -67,7 +67,7 @@
 
 <?php wp_footer(); ?>
 <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afbfa40cb8d4cf3bbd42f863df7f8e57a89c71ec4e2425e68ecb86b5f0b7ad452&amp;width=100%25&amp;height=249&amp;id=map&amp;lang=ru_RU&amp;scroll=true"></script>
-<script type="text/javascript" charset="utf-8" async>
+<script type="text/javascript">
 jQuery(document).ready(function(){
   jQuery('.owl-carousel').owlCarousel({
     items:1,
@@ -82,7 +82,7 @@ jQuery(document).ready(function(){
 });
 </script>
 
-<!--script type="text/javascript" charset="utf-8" async>
+<!--script type="text/javascript">
 jQuery(document).ready(function(){
   jQuery('.owl-carousel').owlCarousel({
     responsive: {

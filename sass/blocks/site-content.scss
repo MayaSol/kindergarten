@@ -23,5 +23,10 @@
     background-repeat: no-repeat;
     background-position: top 87px right 0;
     background-size: 460px 613px;
+
+    @media #{$retina}
+    {
+      background-image: url("img/tree@2x.png");
+    }
   }
 }

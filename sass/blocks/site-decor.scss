@@ -13,14 +13,27 @@
 
     height: 275px;
 
-    background: url("img/tulips@1x.png") top 0 right 224px no-repeat,
-    url("img/fish@1x.png") top 75px right 523px no-repeat,
-    url("img/pond1@1x.svg") top 52px right 397px no-repeat,
-    url("img/pond2@1x.svg") top 50px right 377px no-repeat,
-    url("img/pond3@1x.svg") top 46px right 377px no-repeat,
-    url("img/duck@1x.png") top 117px right 835px no-repeat;
+    background-image: url("img/tulips@1x.png"),
+    url("img/fish@1x.png"),
+    url("img/pond1.svg"),
+    url("img/pond2.svg"),
+    url("img/pond3.svg"),
+    url("img/duck@1x.png");
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+    background-position: top 0 right 224px, top 75px right 523px, top 52px right 397px,
+    top 50px right 377px, top 46px right 377px, top 117px right 835px;
     background-size: 140px 58px,
     99px 69px, 350px 123px, 443px 134px, 442px 155px, 47px 73px;
+
+    @media #{$retina}
+    {
+      background-image: url("img/tulips@2x.png"),
+      url("img/fish@2x.png"),
+      url("img/pond1.svg"),
+      url("img/pond2.svg"),
+      url("img/pond3.svg"),
+      url("img/duck@2x.png");
+    }
   }
 }
 
@@ -41,7 +54,15 @@
       content: "";
       transform: scaleX(-1);
 
-      background: url("img/tulips@1x.png") top left no-repeat;
+      background-image: url("img/tulips@1x.png");
+      background-repeat: no-repeat;
+      background-position: top left;
+      background-size: 140px 58px;
+
+      @media #{$retina}
+      {
+        background-image: url("img/tulips@2x.png");
+      }
     }
   }
 }

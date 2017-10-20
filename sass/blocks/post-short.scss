@@ -92,6 +92,12 @@
         width: 58px;
         height: 37px;
         background-image: url("img/bug@1x.png");
+        background-size: 58px 37px;
+
+        @media #{$retina}
+        {
+          background-image: url("img/bug@2x.png");
+        }
       }
     }
     &:nth-of-type(2)
@@ -106,6 +112,12 @@
         width: 63px;
         height: 57px;
         background-image: url("img/butterfly@1x.png");
+        background-size: 63px 57px;
+
+        @media #{$retina}
+        {
+          background-image: url("img/butterfly@2x.png");
+        }
       }
     }
     .entry-header

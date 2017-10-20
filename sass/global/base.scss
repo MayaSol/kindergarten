@@ -53,9 +53,15 @@ svg {
 @media #{$tablet-widths} {
 
   .site {
-    background-image: url("img/bg-linedpaper.jpg");
+    background-image: url("img/bg-linedpaper@1x.jpg");
     background-repeat: repeat;
     background-color: transparent;
+    background-size: 412px 300px;
+
+    @media #{$retina}
+    {
+      background-image: url("img/bg-linedpaper@2x.jpg");
+    }
   }
 
 }
