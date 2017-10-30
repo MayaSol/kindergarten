@@ -104,9 +104,9 @@ add_action( 'after_setup_theme', 'kindergarten_content_width', 0 );
  */
 function kindergarten_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'kindergarten' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'kindergarten' ),
+		'name'          => 'Нижний сайдбар',
+		'id'            => 'Sidebar-bottom',
+		'description'   => 'Добавьте сюда виджеты',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',

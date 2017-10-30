@@ -11,6 +11,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main  page-archive">
+      <div class="site-main-inner">
 
 		<?php
 		if ( have_posts() ) : ?>
@@ -47,6 +48,7 @@ get_header(); ?>
 
 		endif; ?>
 
+      </div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

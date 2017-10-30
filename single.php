@@ -11,6 +11,7 @@ get_header(); ?>
 
   <div id="primary" class="content-area">
     <main id="main" class="site-main">
+      <div class="site-main-inner">
 
     <header class="page-header">
       <h1 class="page-title"><?php echo get_the_title( get_option('page_for_posts', true) ); ?></h1>
@@ -42,6 +43,7 @@ get_header(); ?>
       endwhile; // End of the loop.
      ?>
 
+      </div>
     </main><!-- #main -->
   </div><!-- #primary -->
 

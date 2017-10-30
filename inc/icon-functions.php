@@ -54,6 +54,7 @@ function kindergarten_get_svg( $args = array() ) {
 		'title'       => '',
 		'desc'        => '',
 		'fallback'    => false,
+    'size'       => array()
 	);
 
 	// Parse args.
@@ -86,8 +87,14 @@ function kindergarten_get_svg( $args = array() ) {
 		}
 	}
 
+  $svg_size = '';
+
+  if ( isset( $args['size'][0]) && isset( $args['size'][1]) ) {
+    $svg_size = ' width="' . $args['size'][0] . '" height="' . $args['size'][1] . '" ';
+  }
+
 	// Begin SVG markup.
-	$svg = '<svg class="icon icon-' . esc_attr( $args['icon'] ) . '"' . $aria_hidden . $aria_labelledby . ' role="img">';
+	$svg = '<svg class="icon icon-' . esc_attr( $args['icon'] ) . '"' . $aria_hidden . $aria_labelledby . ' role="img"' . $svg_size . '>';
 
 	// Display the title.
 	if ( $args['title'] ) {
@@ -136,8 +143,8 @@ function kindergarten_nav_menu_social_icons( $item_output, $item, $depth, $args 
 	if ( 'socials-menu' === $args->theme_location ) {
 		foreach ( $social_icons as $attr => $value ) {
 			if ( false !== strpos( $item_output, $attr ) ) {
-          error_log("__2__ args->link_after = " . $args->link_after);
-				$item_output = str_replace( $args->link_after, '</span>' . kindergarten_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
+				$item_output = str_replace( $args->link_after, '</span>'
+          . kindergarten_get_svg( array( 'icon' => esc_attr( $value ), 'size' => array('30','30') ) ), $item_output );
 			}
 		}
 	}

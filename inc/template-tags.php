@@ -24,7 +24,8 @@ function kindergarten_posted_on() {
     esc_html( get_the_modified_date() )
   );
 
-  $svg_icon_time = '<span class="icon-wrapper  icon-wrapper-date">' . kindergarten_get_svg( $args = array( 'icon' => 'calendar') ) . '</span>';
+  $svg_icon_time = '<span class="icon-wrapper  icon-wrapper-date">'
+  . kindergarten_get_svg( $args = array( 'icon' => 'calendar', 'size' => array('1em','1em')) ) . '</span>';
 
   $posted_on = sprintf(
     /* translators: %s: post date. */
@@ -32,7 +33,8 @@ function kindergarten_posted_on() {
     $svg_icon_time . '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' .  $time_string . '</a>'
   );
 
-  $svg_icon_author = '<span class="icon-wrapper  icon-wrapper-author">' . kindergarten_get_svg( $args = array( 'icon' => 'person') ) . '</span>';
+  $svg_icon_author = '<span class="icon-wrapper  icon-wrapper-author">'
+  . kindergarten_get_svg( $args = array( 'icon' => 'person', 'size' => array('1em','1em')) ) . '</span>';
 
   $byline = sprintf(
     /* translators: %s: post author. */
@@ -120,7 +122,7 @@ if ( ! function_exists( 'kindergarten_contacts' ) ) :
     echo '<section class="contacts-container"> <h2 class="contacts-title">' . esc_html( get_post_meta( $id, 'phone_01_title', true) ) . '</h2>';
 
     $svg_icon_phone = '<span class="icon-wrapper icon-wrapper-phone">'
-    . kindergarten_get_svg( $args = array( 'icon' => 'phone') ) . '</span>';
+    . kindergarten_get_svg( $args = array( 'icon' => 'phone', 'size' => array('1em','1em')) ) . '</span>';
     $tel_01 = esc_html( get_post_meta( $id, 'phone_01_number', true) );
     echo '<p>' . $svg_icon_phone;
     echo '<a class="contacts-phone-tel" href="tel:' . $tel_01 . '">' . $tel_01 . '</a> ';
@@ -134,7 +136,7 @@ if ( ! function_exists( 'kindergarten_contacts' ) ) :
     echo '<a class="contacts-phone-skype" href="skype:' . $tel_02 . '?call">' . $tel_02 . '</a> </p>';
 
     $svg_icon_map = '<p> <span class="icon-wrapper icon-wrapper-map">'
-    . kindergarten_get_svg( $args = array( 'icon' => 'map') ) . '</span>';
+    . kindergarten_get_svg( $args = array( 'icon' => 'map', 'size' => array('1em','1em')) ) . '</span>';
     $address = nl2br( esc_html( get_post_meta( $id, 'address', true) ) );
     echo $svg_icon_map;
     echo $address;

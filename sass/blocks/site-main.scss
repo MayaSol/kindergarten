@@ -1,21 +1,21 @@
 
 @media #{$tablet-widths}
 {
-
   .site-main-inner
   {
     position: relative;
     z-index: 10;
   }
 
-.page-title,
-.page-inner .entry-title
-{
+  .page-title,
+  .page-inner .entry-title
+  {
     font-size: 3rem;
-    line-height: 3rem;
     font-weight: 400;
+    line-height: 3rem;
+
     color: #61cbe6;
-}
+  }
 
   .page-inner,
   .blog,
@@ -25,10 +25,12 @@
     .site-main
     {
       position: relative;
+
       min-height: 181px;
       padding-right: 33px;
-      padding-left: 30px;
       padding-bottom: 35px;
+      padding-left: 30px;
+
       background-color: #ffffff;
 
       &::before
@@ -50,23 +52,24 @@
       }
     }
 
-    .post-navigation {
+    .post-navigation
+    {
       position: relative;
       z-index: 100;
     }
   }
 
-    .page-inner .entry-content,
-    .blog .post,
-    .single .post,
-    .archive .post
-    {
-      position: relative;
-      z-index: 100;
+  .page-inner .entry-content,
+  .blog .post,
+  .single .post,
+  .archive .post
+  {
+    position: relative;
+    z-index: 100;
 
-      margin-top: 40px;
-      margin-top: 0;
-    }
+    margin-top: 40px;
+    margin-top: 0;
+  }
 
   .page-inner .entry-header,
   .blog .page-header,
@@ -88,7 +91,8 @@
   .blog .post,
   .archive .post
   {
-    &:last-of-type {
+    &:last-of-type
+    {
       margin-bottom: 0;
     }
   }
@@ -102,7 +106,6 @@
   {
     margin-bottom: 0;
   }
-
 }
 
 @media #{$desktop-widths}
