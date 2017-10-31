@@ -1,0 +1,102 @@
+.sidebar-bottom-container {
+  @include container;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.sidebar-bottom {
+  padding: 30px;
+  margin-bottom: 30px;
+  background-color: #efc043;
+  width: 870px;
+}
+
+.sidebar-bottom .widget-title {
+  font-family: "SuplexmentaryComicNc", Arial, sans-serif;
+  font-size: 3rem;
+  line-height: 3.6rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 0;
+}
+
+.sidebar-bottom .widget:last-of-type {
+  margin-bottom: 0;
+}
+
+.sidebar-bottom form {
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  input, textarea {
+    background-color: #fdf1d1;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+    font-weight: 400;
+    padding: 10px 20px;
+    color: #313131;
+  }
+
+  label {
+    font-family: "SuplexmentaryComicNc", Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 3rem;
+    margin-bottom: 1.4rem;
+    color: #ffffff;
+  }
+
+}
+
+.user-data-column {
+  width: 50%;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  input {
+    width: 100%;
+  }
+}
+
+.message-column {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  p {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+}
+
+.contact-form-message {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+
+  textarea {
+    flex-grow: 1;
+  }
+}
+
+.btn-container {
+  width: 100%;
+  flex-grow: 1;
+ p {
+    display: flex;
+  }
+
+  input[type="submit"] {
+    margin-left: auto;
+    background-color: #d2804e;
+    border: none;
+  }
+}
+
+
+

@@ -13,6 +13,23 @@
 
   </div><!-- #content -->
 
+  <?php if ( is_active_sidebar( 'sidebar-bottom' ) ) {
+
+      error_log('sidebar is active');
+
+    ?>
+
+    <div class="sidebar-bottom-container">
+      <div id="sidebar-bottom" class="sidebar-bottom">
+
+        <?php dynamic_sidebar( 'sidebar-bottom' ); ?>
+
+      </div>
+    </div>
+
+  <?php }
+   else { error_log('sidebar is not active'); } ?>
+
   <div class="site-decor">
   </div>
 

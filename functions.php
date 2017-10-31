@@ -105,7 +105,7 @@ add_action( 'after_setup_theme', 'kindergarten_content_width', 0 );
 function kindergarten_widgets_init() {
 	register_sidebar( array(
 		'name'          => 'Нижний сайдбар',
-		'id'            => 'Sidebar-bottom',
+		'id'            => 'sidebar-bottom',
 		'description'   => 'Добавьте сюда виджеты',
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
@@ -216,5 +216,7 @@ function  kindergarten_inner_page_class( $classes ) {
 
   return $classes;
 }
+
+/*Add widget with contact form */
 
 
